@@ -7,6 +7,7 @@ let apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 let city= document.querySelector(".search input")
 let btn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weatheIcon");
+const weather = document.querySelector(".weather");
 
 async function checkWeather(city){
     let response = await fetch(apiURL + city + `&appid=${apiKey}`);
@@ -36,5 +37,7 @@ async function checkWeather(city){
 
 btn.addEventListener("click",()=>{
     checkWeather(city.value);
+    weather.style.display="block";
+
 })
 
