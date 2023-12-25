@@ -6,11 +6,14 @@ let author = document.getElementById("author");
 let quoteBtn = document.getElementById("quote-btn");
 
 async function getQuote(url) {
+    colorGenerator()
+    
     const response = await fetch(url);
     let data = await response.json();
     console.log(data);
     quote.innerHTML =data.content;
     author.innerHTML = data.author;
+    colorGenerator()
     
 
 }
@@ -24,3 +27,15 @@ function tweet() {
     )
     
 }
+
+
+function colorGenerator(){
+    const randomNumber =Math.floor(Math.random()*1677285);
+    const randomCode = "#"+ randomNumber.toString(16);
+    quote.style.color =randomCode
+
+}
+
+document.getElementById('btn').addEventListener('click',colorGenerator);
+
+colorGenerator();

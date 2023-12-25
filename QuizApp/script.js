@@ -33,37 +33,37 @@ const questions=[
     ]
 },
 {
-    question:"What is ES",
+    question:"What is css",
     answer:[
         {
-            text:"Elaborate Standred",correct:false
+            text:"Candidate Sheet Score",correct:false
         },
         {
-            text:"Equation Statement",correct:false
+            text:"Code Summer sheet",correct:false
         },
         {
-            text:"Equilibrium State",correct:false
+            text:"Company state step",correct:false
         },
         {
-            text:"Echma Script",correct:true
+            text:"Cascading Style sheet",correct:true
         }
 
     ]
 },
 {
-    question:"What is ES",
+    question:"Which one is brower architecture component",
     answer:[
         {
-            text:"Elaborate Standred",correct:false
+            text:"Dom manipulation",correct:false
         },
         {
-            text:"Equation Statement",correct:false
+            text:"Design",correct:false
         },
         {
-            text:"Equilibrium State",correct:false
+            text:"Cookies",correct:false
         },
         {
-            text:"Echma Script",correct:true
+            text:"Brower Engine",correct:true
         }
 
     ]
