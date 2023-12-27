@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     
     <div class="buttons">
-        <button onclick="showToast()">Success</button>
-        <button onclick="showToast()">Error</button>
-        <button onclick="showToast()">Invalid</button>
+        <button onclick="showToast(successMsg)">Success</button>
+        <button onclick="showToast(errorMsg)">Error</button>
+        <button onclick="showToast(invalidMsg)">Invalid</button>
     </div>
 
     <div id="toast-box">
