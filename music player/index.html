@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class='bx bx-chevron-left'></i>
+                </div>
+                <div class="circle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+            <img src="./468-thumbnail.png" alt="img" class="song-img">
+            <h1>Heeriye-Heeriye</h1>
+            <p>Heeriye-Heeriye-Aa(PaglaSongs)</p>
+
+            <audio id="song">
+                <source src="./Heeriye-Heeriye-Aa(PaglaSongs).mp3"/>
+            </audio>
+            <input type="range" value="0" id="progress">
+            <div class="controls">
+                <div><i class='bx bxs-chevrons-left'></i></div>
+                <div onclick="playPause()"><i class='bx bx-play-circle' id="ctrIcon"></i></div>
+                <div><i class='bx bx-chevrons-right'></i></div>
+            </div>
+        </div>
+    </div>
+    <!-- <i class='bx bx-pause-circle'></i> -->
+    
+    <script>
+        let progress = document.getElementById('progress');
+        let song = document.getElementById('song');
+        let ctrIcon = document.getElementById('ctrIcon');
+
+        song.onloadedmetadata = function () {
+            progress.max = song.duration;
+            progress.value = song.currentTime;
+        }
+        
+        function playPause() {
+            if (ctrIcon.classList.contains('bx-pause-circle')) {
+                song.pause();
+                ctrIcon.classList.remove('bx-pause-circle')
+                ctrIcon.classList.add('bx-play-circle')
+            }else{
+                song.play();
+                ctrIcon.classList.add('bx-pause-circle')
+                ctrIcon.classList.remove('bx-play-circle')
+            }
+        }
+
+        if (song.play()) {
+            setInterval(()=>{
+                progress.value = song.currentTime;
+            },500);            
+        }
+
+        progress.onchange=function (){
+            song.play();
+            song.currentTime=progress.value;
+            ctrIcon.classList.add('bx-pause-circle')
+            ctrIcon.classList.remove('bx-play-circle')
+        }
+
+
+    </script>
+</body>
+</html>
