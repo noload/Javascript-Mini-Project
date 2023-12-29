@@ -23,7 +23,7 @@ async function getQuote(url) {
 // })
 
 function tweet() {
-    window.open(href="//api.whatsapp.com/send?phone=918308604968"+ `&text=${quote.innerHTML}`
+    window.open(href=https"//api.whatsapp.com/send?phone=918308604968"+ `&text=${quote.innerHTML}`
     )
     
 }
