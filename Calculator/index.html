@@ -20,6 +20,7 @@
               value="AC"
               id=""
               onclick="display.value ='' "
+              class="operator"
             />
             <input
               type="button"
@@ -27,12 +28,14 @@
               value="DE"
               id=""
               onclick="display.value = display.value.toString().slice(0,-1) "
+              class="operator"
             />
             <input
               type="button"
               name=""
               value="."
               id=""
+              class="operator"
               onclick="display.value +='.' "
             />
             <input
@@ -40,6 +43,7 @@
               name=""
               value="/"
               id=""
+              class="operator"
               onclick="display.value +='/' "
             />
           </div>
@@ -68,6 +72,7 @@
             <input
               type="button"
               name=""
+              class="operator"
               value="*"
               id=""
               onclick="display.value +='*' "
@@ -98,6 +103,7 @@
             <input
               type="button"
               name=""
+              class="operator"
               value="-"
               id=""
               onclick="display.value +='-' "
@@ -130,6 +136,7 @@
               name=""
               value="+"
               id=""
+              class="operator"
               onclick="display.value +='+' "
             />
           </div>
@@ -153,8 +160,8 @@
               name=""
               value="="
               id=""
-              class="equal"
-              onclick="display.value +='=' "
+              class="equal operator"
+              onclick="display.value=eval(display.value) "
             />
           </div>
         </form>
